@@ -1,8 +1,7 @@
-int main()
-{
-int a,b,c;
-a=5;
-b=6;
-c=a+b;
-return 0;
+int main() {
+    int a,b,c;
+    a = 10;
+    b = 20;
+    c = a + b;
+    return 0;
 }
