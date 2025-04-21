@@ -1,0 +1,35 @@
+// Define an Item with a left-hand side (lhs), right-hand side (rhs), and a dot position
+struct Item {
+    string lhs
+    string rhs
+    int dot
+}
+
+// Check if two lists of Items are the same
+function isEqual(list a, list b):
+    return true if a and b have the same items
+
+// Compute the closure of items
+function closure(list items, grammar g):
+    add new items for symbols after the dot in each item
+    return updated items
+
+// Compute the goto set for a symbol
+function goTo(list items, symbol, grammar g):
+    move dot right for items with the symbol after the dot
+    return closure of these items
+
+// Compute all LR(0) items
+function computeLR0Items(grammar g):
+    start with initial state
+    for each state:
+        find symbols after dots
+        compute next states using goTo
+        add new states and transitions
+
+    print all states
+
+// Main function
+function main():
+    read grammar
+    computeLR0Items(grammar)
